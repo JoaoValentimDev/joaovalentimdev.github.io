@@ -3,7 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,500"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/home.style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <!--JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
+      integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+      crossorigin="anonymous"
+    ></script>
+    <title>João Valentim - portifólio</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="menu">
+        <div class="logo">
+          <a href="#">
+            <i class="fas fa-code"></i>
+            <strong>João Valentim</strong>
+          </a>
+        </div>
+        <ul>
+          <li><a href="#about">Quem sou?</a></li>
+          <li><a href="#formation">Formação</a></li>
+          <li><a href="#technologys">Principais tecnologias</a></li>
+          <li><a href="#contacts">Entre em contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="section-avatar">
+        <div class="avatar">
+          <img src="/assets/img/myself.jpg" alt="my self" />
+          <h1><strong>João Valentim</strong></h1>
+          <p>
+            Desenvolvedor web <br />
+            back-end & front-end
+          </p>
+        </div>
+      </section>
+      <section class="section-about" id="about">
+        <h1>
+          <i class="fas fa-user"></i>
+          <a href="#">Quem sou?</a>
+        </h1>
+        <p>
+          Me chamo <strong>João Gabriel Valentim Theodoro</strong>. Sou facinado
+          pelo mundo da programação. Gosto muito de desenvolver para a web,
+          porem, tenho grande facinio por Ciência de Dados.
+        </p>
+        <p>
+          Me guio por lógica, gosto do que faço e aprendo de forma rápida. Adoro
+          colaborar com todos e sempre estar aberto a novas possibilidades
+        </p>
+      </section>
+      <section class="section-formation" id="formation">
+        <h1>
+          <i class="fas fa-graduation-cap"></i>
+          <a href="#">Formação</a>
+        </h1>
+        <aside class="formation">
+          <a href="#">
+            <img
+              src="https://www.ourinhosnoticias.com.br/painel/imagens/img_noticias/kk194215.jpg"
+              alt="Etec Prof. Pedro Leme Brisolla Sobrinho"
+            />
+          </a>
+          <strong>
+            <i class="fas fa-laptop"></i>
+            Ensino médio integrado ao técnico em informática (ETIM) 2017-2019
+          </strong>
+        </aside>
+      </section>
+      <section class="section-technologys" id="technologys">
+        <div class="bar-mac">
+          <div class="red-circle"></div>
+          <div class="yellow-circle"></div>
+          <div class="green-circle"></div>
+        </div>
+        <h1>
+          <i class="far fa-file-code"></i>
+          <a href="#">Principais técnologias</a>
+        </h1>
+        <div class="techs">
+          <div class="tech">
+            <i class="fab fa-html5 fa-4x" id="html5"></i>
+            <strong>HTML 5</strong>
+          </div>
+          <div class="tech">
+            <i class="fab fa-js fa-4x" id="js"></i>
+            <strong>Javascript - ES6 & ES7</strong>
+          </div>
+          <div class="tech">
+            <i class="fab fa-node fa-4x" id="nodejs"></i>
+            <strong>NodeJS com Exprees.js</strong>
+          </div>
+          <div class="tech">
+            <i class="fab fa-react fa-4x" id="reactjs"></i>
+            <strong>ReactJS</strong>
+          </div>
+          <div class="tech">
+            <i class="fab fa-python fa-4x" id="python"></i>
+            <strong>Python</strong>
+          </div>
+        </div>
+      </section>
+      <section class="section-contacts" id="contacts">
+        <h1>
+          <i class="fas fa-envelope"></i>
+          <a href="#">Entre em contato</a>
+        </h1>
+        <div class="contacts">
+          <div class="contact">
+            <a href="">
+              <i class="fab fa-github fa-2x" id="git"></i>
+              <strong>@JoaoValentimDev</strong>
+            </a>
+          </div>
+          <div class="contact">
+            <a
+              href="https://www.linkedin.com/in/joão-gabriel-theodoro-0356281b5"
+            >
+              <i class="fab fa-linkedin fa-2x" id="linkedin"></i>
+              <strong>João Valentim</strong>
+            </a>
+          </div>
+          <div class="contact">
+            <i class="fas fa-envelope-square fa-2x" id="email"></i>
+            <strong>theodorojoaogabrielvalentim@gmail.com</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      Joao Gabriel Valentim theodoro - <span id="date"></span>
+    </footer>
+    <script src="/assets/js/app.js"></script>
+  </body>
 </html>
