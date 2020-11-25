@@ -38,6 +38,13 @@ function app(window, document) {
   getDate(document);
   createFloatButton(document);
 
+  const startInitBehavior = function (document) {
+    const floatButton = document.querySelector('.float-button');
+    floatButton.style.display = 'none';
+  };
+
+  startInitBehavior(document);
+
   const navigationBar = document.querySelector('header.header');
   changeNaveColor(navigationBar, function (ele) {
     ele.style.backgroundColor = 'transparent';
@@ -64,9 +71,7 @@ function app(window, document) {
   hiddenOrShowFlaotButton(
     document.querySelector('.float-button'),
     function (ele) {
-      ele.style.display = 'none';
       const top = window.pageYOffset || document.documentElement.scrollTop;
-
       if (top > 0) {
         ele.style.display = 'flex';
       } else {
