@@ -1,5 +1,6 @@
 'use strict';
-(function (document, window) {
+
+function app(window, document) {
   const getDate = function (doc) {
     const spanDate = doc.querySelector('span#date');
     const year = new Date().getFullYear();
@@ -11,7 +12,7 @@
     const link = doc.createElement('a');
     div.setAttribute('class', 'float-button');
     link.setAttribute('href', '#');
-    link.innerHTML = `<i class="fas fa-arrow-up"></i>`;
+    link.innerHTML = "<i class='fas fa-2x fa-arrow-up'></i>";
     div.appendChild(link);
     doc.body.appendChild(div);
   };
@@ -36,18 +37,45 @@
 
   getDate(document);
   createFloatButton(document);
+
   const navigationBar = document.querySelector('header.header');
   changeNaveColor(navigationBar, function (ele) {
     ele.style.backgroundColor = 'transparent';
     const top = window.pageYOffset || document.documentElement.scrollTop;
+
     if (top > 0) {
       ele.style.backgroundColor = '#1d1d1d';
     } else {
       ele.style.backgroundColor = 'transparent';
     }
   });
+
   const hambButton = document.querySelector('button.hamb-button');
   hambButton.onclick = function (e) {
     toggle(document.querySelector('nav.menu ul'));
   };
+
+  const hiddenOrShowFlaotButton = function (element, cb) {
+    setInterval(function () {
+      cb(element);
+    }, 1000);
+  };
+
+  hiddenOrShowFlaotButton(
+    document.querySelector('.float-button'),
+    function (ele) {
+      ele.style.display = 'none';
+      const top = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (top > 0) {
+        ele.style.display = 'flex';
+      } else {
+        ele.style.display = 'none';
+      }
+    }
+  );
+}
+
+(function (document, window) {
+  app(window, document);
 })(document, window);
