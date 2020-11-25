@@ -41,6 +41,14 @@ function app(window, document) {
   const startInitBehavior = function (document) {
     const floatButton = document.querySelector('.float-button');
     floatButton.style.display = 'none';
+
+    const navLinks = document.querySelectorAll('nav.menu ul li a.link');
+    navLinks.forEach(function (link) {
+      link.onclick = function (e) {
+        const menuLinksGroup = document.querySelector('nav.menu ul');
+        menuLinksGroup.classList.remove('active-toggle');
+      };
+    });
   };
 
   startInitBehavior(document);
